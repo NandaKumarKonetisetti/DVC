@@ -2,13 +2,18 @@ stages:
   stage_01:
     cmd: python stage_01.py
     deps:
-     -stage_01.py
+     - stage_01.py
     outs:
-      -artifact.txt
+      - artifact.txt
 
   stage_02:
-    cmd:pyhton stage_02.py
+    cmd: python stage_02.py
     deps:
-      -artifact.txt
-      -stage_02.py
+      - artifact.txt
+      - stage_02.py
+  stage_03:
+    cmd: python stage_03.py
+    deps:
+      - artifact.txt
+      - stage_03.py
     
